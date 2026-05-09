@@ -1,0 +1,1 @@
+<view class="difficulty difficulty-{{variant}}">{{ level }}</view>

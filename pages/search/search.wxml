@@ -1,0 +1,16 @@
+<view class="page search-page">
+  <view class="search-top dark-hero safe-top">
+    <view class="search-row">
+      <view class="search-input">
+        <text>⌕</text>
+        <input value="{{keyword}}" focus placeholder="搜索动作、教程、用户" bindinput="updateKeyword" />
+        <text wx:if="{{keyword}}" class="clear" bindtap="clearSearch">×</text>
+      </view>
+      <text class="cancel" bindtap="goBack">取消</text>
+    </view>
+  </view>
+
+  <view class="result-info">找到 {{results.length}} 个相关作品</view>
+  <post-card wx:for="{{results}}" wx:key="id" post="{{item}}" bind:tapcard="goDetail" />
+  <empty-state wx:if="{{results.length === 0}}" title="没有搜索结果" desc="试试搜索动作、教程或作者昵称" />
+</view>

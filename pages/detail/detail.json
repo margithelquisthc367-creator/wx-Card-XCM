@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "difficulty-tag": "/components/difficulty-tag/difficulty-tag"
+  }
+}

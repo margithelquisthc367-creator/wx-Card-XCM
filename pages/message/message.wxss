@@ -1,0 +1,94 @@
+.message-hero {
+  min-height: 230rpx;
+  padding-left: 28rpx;
+  padding-right: 28rpx;
+}
+
+.page-title {
+  padding-top: 44rpx;
+  color: #fff;
+  font-size: 42rpx;
+  font-weight: 900;
+}
+
+.entry-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14rpx;
+  margin: -58rpx 28rpx 30rpx;
+  padding: 24rpx;
+}
+
+.entry {
+  text-align: center;
+}
+
+.entry-icon {
+  width: 72rpx;
+  height: 72rpx;
+  margin: 0 auto 12rpx;
+  border-radius: 22rpx;
+  color: #7c3cff;
+  font-size: 36rpx;
+  line-height: 72rpx;
+  background: #f1ebff;
+}
+
+.entry-name {
+  color: #202434;
+  font-size: 26rpx;
+  font-weight: 900;
+}
+
+.entry-count {
+  margin-top: 6rpx;
+  color: #8b8fa3;
+  font-size: 21rpx;
+}
+
+.message-list {
+  margin: 0 28rpx;
+  padding: 8rpx 24rpx;
+}
+
+.message-item {
+  display: flex;
+  align-items: center;
+  gap: 18rpx;
+  padding: 24rpx 0;
+  border-top: 2rpx solid #f0f1f6;
+}
+
+.message-item:first-child {
+  border-top: 0;
+}
+
+.type {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 22rpx;
+  color: #fff;
+  font-size: 23rpx;
+  font-weight: 900;
+  line-height: 72rpx;
+  text-align: center;
+  background: linear-gradient(135deg, #1e9bff, #7c3cff);
+}
+
+.message-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.message-title {
+  color: #222636;
+  font-size: 27rpx;
+  font-weight: 900;
+}
+
+.message-content,
+.time {
+  margin-top: 8rpx;
+  color: #8b8fa3;
+  font-size: 23rpx;
+}

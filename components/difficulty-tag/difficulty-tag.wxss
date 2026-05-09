@@ -1,0 +1,24 @@
+.difficulty {
+  display: inline-flex;
+  align-items: center;
+  height: 40rpx;
+  padding: 0 16rpx;
+  border-radius: 999rpx;
+  font-size: 22rpx;
+  font-weight: 700;
+}
+
+.difficulty-easy {
+  color: #18a058;
+  background: #e9f8ef;
+}
+
+.difficulty-medium {
+  color: #2268ff;
+  background: #eaf1ff;
+}
+
+.difficulty-hard {
+  color: #f04444;
+  background: #fff0f0;
+}

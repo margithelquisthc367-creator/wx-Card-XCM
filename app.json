@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/publish/publish",
+    "pages/message/message",
+    "pages/profile/profile",
+    "pages/detail/detail",
+    "pages/search/search"
+  ],
+  "window": {
+    "navigationBarTitleText": "魔术花切交流会",
+    "navigationStyle": "custom",
+    "backgroundColor": "#05070f",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#8b8fa3",
+    "selectedColor": "#7c3cff",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "＋发布"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

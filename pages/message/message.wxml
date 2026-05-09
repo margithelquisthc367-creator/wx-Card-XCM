@@ -1,0 +1,28 @@
+<view class="page message-page">
+  <view class="message-hero dark-hero safe-top">
+    <view class="page-title">消息</view>
+  </view>
+
+  <view class="entry-card card">
+    <view class="entry" wx:for="{{entries}}" wx:key="name">
+      <view class="entry-icon">{{item.icon}}</view>
+      <view>
+        <view class="entry-name">{{item.name}}</view>
+        <view class="entry-count">{{item.count}} 条新动态</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="message-list card" wx:if="{{messages.length}}">
+    <view class="message-item" wx:for="{{messages}}" wx:key="id">
+      <view class="type">{{item.type}}</view>
+      <view class="message-main">
+        <view class="message-title">{{item.title}}</view>
+        <view class="message-content">{{item.content}}</view>
+      </view>
+      <view class="time">{{item.time}}</view>
+    </view>
+  </view>
+
+  <empty-state wx:else title="暂无消息" desc="新的评论、点赞和收藏会显示在这里" />
+</view>

@@ -1,0 +1,27 @@
+.empty {
+  padding: 96rpx 40rpx;
+  text-align: center;
+  color: #8b8fa3;
+}
+
+.empty-icon {
+  width: 116rpx;
+  height: 116rpx;
+  margin: 0 auto 22rpx;
+  border-radius: 36rpx;
+  color: #7c3cff;
+  font-size: 64rpx;
+  line-height: 116rpx;
+  background: linear-gradient(135deg, #f0e9ff, #eaf4ff);
+}
+
+.empty-title {
+  color: #222636;
+  font-size: 30rpx;
+  font-weight: 800;
+}
+
+.empty-desc {
+  margin-top: 12rpx;
+  font-size: 24rpx;
+}

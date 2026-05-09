@@ -1,0 +1,81 @@
+<view class="page detail-page" wx:if="{{post}}">
+  <view class="video cover-{{post.coverTone}}">
+    <view class="back" bindtap="goBack">‹</view>
+    <view class="detail-cards">
+      <view>A</view>
+      <view>♠</view>
+      <view>K</view>
+    </view>
+    <view class="play">▶</view>
+    <view class="progress">
+      <text>00:06 / {{post.duration}}</text>
+      <view class="bar"><view></view></view>
+      <text>⛶</text>
+    </view>
+  </view>
+
+  <view class="detail-card card">
+    <view class="title-row">
+      <view class="detail-title">{{ post.title }} ✨</view>
+      <text class="date">发布于 {{post.createdAt}}</text>
+    </view>
+    <view class="tag-row">
+      <view class="tag">{{post.category}}</view>
+      <difficulty-tag level="{{post.difficulty}}" />
+    </view>
+
+    <view class="author-row">
+      <view class="avatar">{{post.author.avatar}}</view>
+      <view class="author-main">
+        <view>
+          <text class="name">{{post.author.nickname}}</text>
+          <text class="level">{{post.author.level}}</text>
+        </view>
+        <text class="bio">希望我的花切能带来一点灵感</text>
+      </view>
+      <button class="follow">关注</button>
+    </view>
+
+    <view class="intro">{{post.intro}}</view>
+    <view class="topic"># {{post.title}}</view>
+
+    <view class="action-row">
+      <view class="action {{post.liked ? 'active' : ''}}" bindtap="toggleLike">
+        <text>{{post.liked ? '♥' : '♡'}}</text>
+        <text>{{post.likes}}</text>
+        <text>点赞</text>
+      </view>
+      <view class="action {{post.collected ? 'active' : ''}}" bindtap="toggleCollect">
+        <text>{{post.collected ? '★' : '☆'}}</text>
+        <text>{{post.favorites}}</text>
+        <text>收藏</text>
+      </view>
+      <view class="action">
+        <text>☷</text>
+        <text>{{post.comments}}</text>
+        <text>评论</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="comments card">
+    <view class="section-title">评论（{{post.comments}}）</view>
+    <view class="comment" wx:for="{{comments}}" wx:key="id">
+      <view class="comment-avatar">{{item.author.avatar}}</view>
+      <view class="comment-main">
+        <view class="comment-name">
+          <text>{{item.author.nickname}}</text>
+          <text class="level">{{item.author.level}}</text>
+        </view>
+        <view class="comment-content">{{item.content}}</view>
+        <view class="comment-meta">{{item.createdAt}}　回复</view>
+      </view>
+      <view class="comment-like">♡ {{item.likes}}</view>
+    </view>
+  </view>
+
+  <view class="comment-bar">
+    <input value="{{inputValue}}" placeholder="说点什么..." bindinput="updateComment" />
+    <button bindtap="sendComment">发送</button>
+  </view>
+</view>

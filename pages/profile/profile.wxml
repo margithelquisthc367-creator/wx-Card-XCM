@@ -1,0 +1,47 @@
+<view class="page profile-page">
+  <view class="profile-hero dark-hero safe-top">
+    <view class="hero-deco">✦ ♠ ✦</view>
+    <view class="user-row">
+      <view class="big-avatar">{{user.avatar}}</view>
+      <view class="user-main">
+        <view>
+          <text class="nickname">{{user.nickname}}</text>
+          <text class="level">{{user.level}}</text>
+        </view>
+        <view class="bio">{{user.bio}}</view>
+        <view class="location">IP属地：{{user.location}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="stats card">
+    <view>
+      <text>{{user.stats.posts}}</text>
+      <text>发布</text>
+    </view>
+    <view>
+      <text>{{user.stats.favorites}}</text>
+      <text>收藏</text>
+    </view>
+    <view>
+      <text>{{user.stats.likes}}</text>
+      <text>获赞</text>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-head">
+      <text>我的发布</text>
+      <text>全部 ›</text>
+    </view>
+    <post-card wx:for="{{myPosts}}" wx:key="id" post="{{item}}" bind:tapcard="goDetail" />
+  </view>
+
+  <view class="section">
+    <view class="section-head">
+      <text>我的收藏</text>
+      <text>全部 ›</text>
+    </view>
+    <post-card wx:for="{{collections}}" wx:key="id" post="{{item}}" bind:tapcard="goDetail" />
+  </view>
+</view>

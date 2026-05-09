@@ -1,0 +1,27 @@
+<view class="page index-page">
+  <view class="index-hero dark-hero safe-top">
+    <view class="hero-title">
+      <text class="brand">XCM Community</text>
+      <text class="spade">♠</text>
+    </view>
+    <view class="search-box" bindtap="goSearch">
+      <text class="search-icon">⌕</text>
+      <text class="search-placeholder">搜索动作、教程、用户</text>
+    </view>
+    <category-tabs categories="{{categories}}" active="{{activeCategory}}" bind:change="handleCategoryChange" />
+  </view>
+
+  <view class="feed">
+    <post-card
+      wx:for="{{visiblePosts}}"
+      wx:key="id"
+      post="{{item}}"
+      bind:tapcard="goDetail"
+    />
+    <empty-state
+      wx:if="{{visiblePosts.length === 0}}"
+      title="没有找到作品"
+      desc="换个分类看看新的花切灵感"
+    />
+  </view>
+</view>

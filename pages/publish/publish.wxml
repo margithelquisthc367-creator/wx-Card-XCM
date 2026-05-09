@@ -1,0 +1,70 @@
+<view class="page publish-page">
+  <view class="publish-hero dark-hero safe-top">
+    <view class="topbar">
+      <text class="back">‹</text>
+      <text class="title">发布作品</text>
+      <text class="more">•••</text>
+    </view>
+  </view>
+
+  <view class="form card">
+    <view class="field">
+      <view class="label">标题 <text>*</text></view>
+      <view class="input-wrap">
+        <input value="{{form.title}}" maxlength="30" placeholder="请输入作品标题（最多30字）" bindinput="updateTitle" />
+        <text>{{form.title.length}}/30</text>
+      </view>
+    </view>
+
+    <view class="field">
+      <view class="label">简介 <text>*</text></view>
+      <view class="textarea-wrap">
+        <textarea value="{{form.intro}}" maxlength="200" placeholder="介绍你的动作亮点、创意或技巧要点..." bindinput="updateIntro" />
+        <text>{{form.intro.length}}/200</text>
+      </view>
+    </view>
+
+    <view class="field">
+      <view class="label">分类 <text>*</text></view>
+      <view class="option-grid">
+        <view
+          wx:for="{{publishCategories}}"
+          wx:key="*this"
+          class="option {{form.category === item ? 'option-active' : ''}}"
+          data-value="{{item}}"
+          bindtap="chooseCategory"
+        >
+          {{ item }}
+        </view>
+      </view>
+    </view>
+
+    <view class="field">
+      <view class="label">难度 <text>*</text></view>
+      <view class="option-grid difficulty-grid">
+        <view
+          wx:for="{{difficulties}}"
+          wx:key="*this"
+          class="option {{form.difficulty === item ? 'option-active' : ''}}"
+          data-value="{{item}}"
+          bindtap="chooseDifficulty"
+        >
+          {{ item }}
+        </view>
+      </view>
+    </view>
+
+    <view class="upload-row">
+      <view class="upload-box" bindtap="showUploadToast">
+        <text class="plus">＋</text>
+        <text>上传封面</text>
+      </view>
+      <view class="upload-box" bindtap="showUploadToast">
+        <text class="plus">＋</text>
+        <text>上传视频</text>
+      </view>
+    </view>
+
+    <button class="submit primary-gradient" bindtap="submit">发布我的创作</button>
+  </view>
+</view>

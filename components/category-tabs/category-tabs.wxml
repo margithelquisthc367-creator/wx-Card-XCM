@@ -1,0 +1,13 @@
+<scroll-view class="tabs" scroll-x enhanced show-scrollbar="{{false}}">
+  <view class="tab-row">
+    <view
+      wx:for="{{categories}}"
+      wx:key="*this"
+      class="tab {{active === item ? 'tab-active' : ''}}"
+      data-value="{{item}}"
+      bindtap="handleTap"
+    >
+      {{ item }}
+    </view>
+  </view>
+</scroll-view>
