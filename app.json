@@ -5,7 +5,9 @@
     "pages/message/message",
     "pages/profile/profile",
     "pages/detail/detail",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/intro/intro",
+    "pages/card-show/card-show"
   ],
   "window": {
     "navigationBarTitleText": "魔术花切交流会",
@@ -14,6 +16,7 @@
     "backgroundTextStyle": "light"
   },
   "tabBar": {
+    "custom": true,
     "color": "#8b8fa3",
     "selectedColor": "#7c3cff",
     "backgroundColor": "#ffffff",

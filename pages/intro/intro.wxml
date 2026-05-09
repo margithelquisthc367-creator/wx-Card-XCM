@@ -1,0 +1,27 @@
+<view class="page intro-page">
+  <view class="intro-hero dark-hero safe-top">
+    <view class="topbar">
+      <text class="back" bindtap="goBack">‹</text>
+      <text class="title">入门XCM</text>
+      <text></text>
+    </view>
+    <view class="subtitle">基础花切与魔术流程目录</view>
+  </view>
+
+  <view class="directory card">
+    <view
+      wx:for="{{tabs}}"
+      wx:key="*this"
+      class="directory-item {{active === item ? 'directory-active' : ''}}"
+      data-value="{{item}}"
+      bindtap="switchTab"
+    >
+      <text>{{item === '花切新手' ? '＋' : '♠'}}</text>
+      <view>{{item}}</view>
+    </view>
+  </view>
+
+  <view class="feed-title">{{active}}帖子</view>
+  <post-card wx:for="{{visiblePosts}}" wx:key="id" post="{{item}}" bind:tapcard="goDetail" />
+  <empty-state wx:if="{{visiblePosts.length === 0}}" title="暂无帖子" desc="这个目录还没有新的内容" />
+</view>

@@ -26,7 +26,7 @@ button::after {
 
 .page {
   min-height: 100vh;
-  padding-bottom: 40rpx;
+  padding-bottom: calc(140rpx + env(safe-area-inset-bottom));
   background: #f5f6fb;
 }
 

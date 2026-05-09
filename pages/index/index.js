@@ -26,11 +26,23 @@ Page({
   getFilteredPosts() {
     const { activeCategory, allPosts } = this.data
     if (activeCategory === '推荐') return allPosts
+    if (activeCategory === '入门XCM') {
+      return allPosts.filter((item) => ['花切新手', '魔术流程'].includes(item.category))
+    }
     return allPosts.filter((item) => item.category === activeCategory)
   },
 
   handleCategoryChange(event) {
-    this.setData({ activeCategory: event.detail.value }, () => this.refreshList())
+    const value = event.detail.value
+    if (value === '入门XCM') {
+      wx.navigateTo({ url: '/pages/intro/intro' })
+      return
+    }
+    if (value === '牌展') {
+      wx.navigateTo({ url: '/pages/card-show/card-show' })
+      return
+    }
+    this.setData({ activeCategory: value }, () => this.refreshList())
   },
 
   goSearch() {

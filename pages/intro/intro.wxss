@@ -1,0 +1,77 @@
+.intro-hero {
+  min-height: 250rpx;
+  padding: 0 28rpx 44rpx;
+}
+
+.topbar {
+  display: grid;
+  grid-template-columns: 72rpx 1fr 72rpx;
+  align-items: center;
+  padding-top: 18rpx;
+}
+
+.back {
+  color: #fff;
+  font-size: 52rpx;
+}
+
+.title {
+  color: #fff;
+  font-size: 36rpx;
+  font-weight: 900;
+  text-align: center;
+}
+
+.subtitle {
+  margin-top: 30rpx;
+  color: rgba(255, 255, 255, .72);
+  font-size: 25rpx;
+  text-align: center;
+}
+
+.directory {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18rpx;
+  margin: -44rpx 20rpx 28rpx;
+  padding: 20rpx;
+  border-radius: 18rpx;
+  box-shadow: none;
+}
+
+.directory-item {
+  display: flex;
+  align-items: center;
+  gap: 14rpx;
+  min-height: 94rpx;
+  padding: 0 20rpx;
+  border: 2rpx solid #eef0f6;
+  border-radius: 16rpx;
+  color: #3f4554;
+  font-size: 27rpx;
+  font-weight: 900;
+  background: #fafbff;
+}
+
+.directory-item text {
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  color: #7c3cff;
+  line-height: 48rpx;
+  text-align: center;
+  background: #f1ebff;
+}
+
+.directory-active {
+  border-color: #7c3cff;
+  color: #7c3cff;
+  background: #f6f2ff;
+}
+
+.feed-title {
+  padding: 0 24rpx 18rpx;
+  color: #1f2433;
+  font-size: 30rpx;
+  font-weight: 900;
+}

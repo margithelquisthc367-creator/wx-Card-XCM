@@ -1,5 +1,6 @@
-const categories = ['推荐', '原创动作', '大神复刻', '新手教学', '魔术流程', '花切展示', '求指导']
-const publishCategories = categories.filter((item) => item !== '推荐')
+const categories = ['推荐', '原创', '大神复刻', '入门XCM', '牌展', '求指导']
+const introCategories = ['花切新手', '魔术流程']
+const publishCategories = ['原创', '大神复刻', '花切新手', '魔术流程', '牌展', '求指导']
 const difficulties = ['简单', '中等', '困难']
 
 const currentUser = {
@@ -29,7 +30,7 @@ const posts = [
     id: 101,
     title: '双旋切牌展示',
     intro: '双旋切是最燃的基础进阶动作之一，掌握节奏与手腕的配合就能让画面流动起来，希望大家喜欢。',
-    category: '花切展示',
+    category: '牌展',
     difficulty: '中等',
     author: users[0],
     duration: '00:36',
@@ -45,7 +46,7 @@ const posts = [
     id: 102,
     title: '单手开扇教学',
     intro: '适合刚开始练花切的朋友，重点是拇指发力、牌面压力和收尾角度。',
-    category: '新手教学',
+    category: '花切新手',
     difficulty: '简单',
     author: users[1],
     duration: '00:28',
@@ -61,7 +62,7 @@ const posts = [
     id: 103,
     title: '飞退切牌教学',
     intro: '一个节奏很快的原创动作，建议先练好基础切牌和双手交接。',
-    category: '原创动作',
+    category: '原创',
     difficulty: '困难',
     author: users[2],
     duration: '00:45',
@@ -138,6 +139,7 @@ const messages = [
 
 module.exports = {
   categories,
+  introCategories,
   publishCategories,
   difficulties,
   currentUser,

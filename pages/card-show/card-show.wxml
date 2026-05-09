@@ -1,0 +1,14 @@
+<view class="page card-show-page">
+  <view class="show-hero dark-hero safe-top">
+    <view class="topbar">
+      <text class="back" bindtap="goBack">‹</text>
+      <text class="title">牌展</text>
+      <text></text>
+    </view>
+    <view class="subtitle">展示你的花切、手法和牌面视觉</view>
+  </view>
+
+  <view class="feed-title">牌展帖子</view>
+  <post-card wx:for="{{visiblePosts}}" wx:key="id" post="{{item}}" bind:tapcard="goDetail" />
+  <empty-state wx:if="{{visiblePosts.length === 0}}" title="暂无牌展" desc="还没有牌展帖子" />
+</view>

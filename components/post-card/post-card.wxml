@@ -1,4 +1,21 @@
 <view class="post-card card" bindtap="handleTap">
+  <view class="post-body">
+    <view class="author-line">
+      <view class="avatar">{{ post.author.avatar }}</view>
+      <text class="author-name">{{ post.author.nickname }}</text>
+      <text class="time">{{ post.createdAt }}</text>
+    </view>
+    <view class="post-title">{{ post.title }}</view>
+    <view class="post-intro">{{ post.intro }}</view>
+    <view class="tag-row">
+      <view class="tag">{{ post.category }}</view>
+      <difficulty-tag level="{{post.difficulty}}" />
+    </view>
+    <view class="counts">
+      <text>赞 {{ post.likes }}</text>
+      <text>评论 {{ post.comments }}</text>
+    </view>
+  </view>
   <view class="cover cover-{{post.coverTone}}">
     <view class="card-spark">✦</view>
     <view class="card-fan">
@@ -8,22 +25,5 @@
     </view>
     <view class="play">▶</view>
     <view class="duration">{{ post.duration }}</view>
-  </view>
-  <view class="post-body">
-    <view class="post-title">{{ post.title }}</view>
-    <view class="tag-row">
-      <view class="tag">{{ post.category }}</view>
-      <difficulty-tag level="{{post.difficulty}}" />
-    </view>
-    <view class="meta-row">
-      <view class="author">
-        <view class="avatar">{{ post.author.avatar }}</view>
-        <text>{{ post.author.nickname }}</text>
-      </view>
-      <view class="counts">
-        <text>♡ {{ post.likes }}</text>
-        <text>☷ {{ post.comments }}</text>
-      </view>
-    </view>
   </view>
 </view>
