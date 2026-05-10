@@ -1,10 +1,23 @@
-const { currentUser, posts } = require('../../utils/mockData')
+const { currentUser, profileFeeds } = require('../../utils/mockData')
 
 Page({
   data: {
     user: currentUser,
-    myPosts: posts.filter((item) => item.author.id === currentUser.id),
-    collections: posts.filter((item) => item.collected)
+    tabs: [
+      { key: 'published', name: '发布' },
+      { key: 'collected', name: '收藏' },
+      { key: 'liked', name: '获赞' }
+    ],
+    activeTab: 'published',
+    visiblePosts: profileFeeds.published
+  },
+
+  switchTab(event) {
+    const key = event.currentTarget.dataset.key
+    this.setData({
+      activeTab: key,
+      visiblePosts: profileFeeds[key] || []
+    })
   },
 
   goDetail(event) {

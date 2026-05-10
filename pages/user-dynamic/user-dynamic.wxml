@@ -1,0 +1,31 @@
+<view class="page user-dynamic-page" wx:if="{{activity}}">
+  <view class="user-hero dark-hero safe-top">
+    <view class="topbar">
+      <text class="back" bindtap="goBack">‹</text>
+      <text class="title">用户动态</text>
+      <text></text>
+    </view>
+    <view class="user-row">
+      <view class="big-avatar">{{activity.user.avatar}}</view>
+      <view class="user-main">
+        <view>
+          <text class="nickname">{{activity.user.nickname}}</text>
+          <text class="level">{{activity.user.level}}</text>
+        </view>
+        <view class="bio">{{activity.user.bio}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="activity-card card">
+    <view class="activity-title">最近动态</view>
+    <view class="activity-item" wx:for="{{activity.recentActions}}" wx:key="*this">{{item}}</view>
+  </view>
+
+  <view class="section-head">
+    <text>TA 的帖子</text>
+    <text>{{activity.posts.length}} 条</text>
+  </view>
+  <post-card wx:for="{{activity.posts}}" wx:key="id" post="{{item}}" bind:tapcard="goDetail" />
+  <empty-state wx:if="{{activity.posts.length === 0}}" title="暂无动态" desc="这个用户还没有发布内容" />
+</view>

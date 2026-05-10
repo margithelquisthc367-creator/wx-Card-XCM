@@ -134,8 +134,48 @@ const comments = [
 const messages = [
   { id: 1, type: '评论', title: '魔术师阿凯评论了你的作品', content: '双旋切牌展示真的很稳。', time: '10分钟前' },
   { id: 2, type: '点赞', title: 'Kylin 点赞了你的作品', content: '双旋切牌展示', time: '28分钟前' },
-  { id: 3, type: '收藏', title: 'NIKO 收藏了你的教程', content: '单手开扇教学', time: '昨天' }
+  { id: 3, type: '收藏', title: 'NIKO 收藏了你的教程', content: '单手开扇教学', time: '昨天' },
+  { id: 4, type: '发布', title: 'AceLin 发布了新流程', content: '三段式切牌组合', time: '2天前' },
+  { id: 5, type: '获赞', title: '你的牌展获得 32 个赞', content: '双旋切牌展示', time: '3天前' },
+  { id: 6, type: '私信', title: 'Kylin 发来私信', content: '飞退切牌的慢动作可以交流一下吗？', time: '刚刚' },
+  { id: 7, type: '私信', title: 'NIKO 发来私信', content: '你这个双旋切牌接得很顺，想约一场复刻练习。', time: '1小时前' }
 ]
+
+const profileFeeds = {
+  published: posts.filter((item) => item.author.id === currentUser.id),
+  collected: posts.filter((item) => item.collected),
+  liked: posts.filter((item) => item.likes >= 298)
+}
+
+const messageGroups = [
+  { key: '发布', name: '发布', icon: '＋', count: 6 },
+  { key: '收藏', name: '收藏', icon: '☆', count: 9 },
+  { key: '获赞', name: '获赞', icon: '♡', count: 28 },
+  { key: '私信', name: '私信', icon: '✉', count: 2 }
+]
+
+const userActivities = users.map((user) => {
+  const ownPosts = posts.filter((item) => item.author.id === user.id)
+  const fallbackPosts = posts.filter((item) => item.author.id !== user.id).slice(0, 2)
+  return {
+    user,
+    posts: ownPosts.length ? ownPosts : fallbackPosts,
+    recentActions: [
+      `${user.nickname} 最近参与了花切动作讨论`,
+      `${user.nickname} 收藏了一个进阶练习帖`,
+      `${user.nickname} 给社区作品点了赞`
+    ]
+  }
+})
+
+function getUserById(id) {
+  return users.find((item) => item.id === Number(id)) || currentUser
+}
+
+function getUserActivityById(id) {
+  const user = getUserById(id)
+  return userActivities.find((item) => item.user.id === user.id) || userActivities[0]
+}
 
 module.exports = {
   categories,
@@ -146,5 +186,10 @@ module.exports = {
   users,
   posts,
   comments,
-  messages
+  messages,
+  profileFeeds,
+  messageGroups,
+  userActivities,
+  getUserById,
+  getUserActivityById
 }

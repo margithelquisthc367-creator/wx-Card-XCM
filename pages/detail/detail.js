@@ -20,6 +20,12 @@ Page({
     wx.navigateBack()
   },
 
+  goUser(event) {
+    wx.navigateTo({ url: `/pages/user-dynamic/user-dynamic?id=${event.currentTarget.dataset.id}` })
+  },
+
+  stopTap() {},
+
   toggleLike() {
     const post = this.data.post
     const liked = !post.liked
@@ -50,7 +56,7 @@ Page({
     const comment = {
       id: Date.now(),
       postId: this.data.post.id,
-      author: { nickname: '我', avatar: '我', level: 'Lv.1' },
+      author: { id: 1, nickname: '我', avatar: '我', level: 'Lv.1' },
       content: value,
       likes: 0,
       createdAt: '刚刚'

@@ -4,11 +4,17 @@
   </view>
 
   <view class="entry-card card">
-    <view class="entry" wx:for="{{entries}}" wx:key="name">
+    <view
+      class="entry {{activeType === item.key ? 'entry-active' : ''}}"
+      wx:for="{{entries}}"
+      wx:key="key"
+      data-type="{{item.key}}"
+      bindtap="switchType"
+    >
       <view class="entry-icon">{{item.icon}}</view>
       <view>
         <view class="entry-name">{{item.name}}</view>
-        <view class="entry-count">{{item.count}} 条新动态</view>
+        <view class="entry-count">{{item.count}} 条动态</view>
       </view>
     </view>
   </view>

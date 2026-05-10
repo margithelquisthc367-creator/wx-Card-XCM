@@ -31,17 +31,20 @@
 
   <view class="section">
     <view class="section-head">
-      <text>我的发布</text>
-      <text>全部 ›</text>
+      <text>我的动态</text>
+      <text>{{visiblePosts.length}} 条</text>
     </view>
-    <post-card wx:for="{{myPosts}}" wx:key="id" post="{{item}}" bind:tapcard="goDetail" />
-  </view>
-
-  <view class="section">
-    <view class="section-head">
-      <text>我的收藏</text>
-      <text>全部 ›</text>
+    <view class="profile-tabs card">
+      <view
+        wx:for="{{tabs}}"
+        wx:key="key"
+        class="profile-tab {{activeTab === item.key ? 'profile-tab-active' : ''}}"
+        data-key="{{item.key}}"
+        bindtap="switchTab"
+      >
+        {{item.name}}
+      </view>
     </view>
-    <post-card wx:for="{{collections}}" wx:key="id" post="{{item}}" bind:tapcard="goDetail" />
+    <post-card wx:for="{{visiblePosts}}" wx:key="id" post="{{item}}" bind:tapcard="goDetail" />
   </view>
 </view>

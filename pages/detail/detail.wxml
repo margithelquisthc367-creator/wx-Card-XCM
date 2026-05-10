@@ -24,7 +24,7 @@
       <difficulty-tag level="{{post.difficulty}}" />
     </view>
 
-    <view class="author-row">
+    <view class="author-row" data-id="{{post.author.id}}" bindtap="goUser">
       <view class="avatar">{{post.author.avatar}}</view>
       <view class="author-main">
         <view>
@@ -33,7 +33,7 @@
         </view>
         <text class="bio">希望我的花切能带来一点灵感</text>
       </view>
-      <button class="follow">关注</button>
+      <button class="follow" catchtap="stopTap">关注</button>
     </view>
 
     <view class="intro">{{post.intro}}</view>
@@ -61,9 +61,9 @@
   <view class="comments card">
     <view class="section-title">评论（{{post.comments}}）</view>
     <view class="comment" wx:for="{{comments}}" wx:key="id">
-      <view class="comment-avatar">{{item.author.avatar}}</view>
+      <view class="comment-avatar" data-id="{{item.author.id}}" bindtap="goUser">{{item.author.avatar}}</view>
       <view class="comment-main">
-        <view class="comment-name">
+        <view class="comment-name" data-id="{{item.author.id}}" bindtap="goUser">
           <text>{{item.author.nickname}}</text>
           <text class="level">{{item.author.level}}</text>
         </view>

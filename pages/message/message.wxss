@@ -18,10 +18,10 @@
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14rpx;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10rpx;
   margin: -42rpx 28rpx 30rpx;
-  padding: 24rpx;
+  padding: 18rpx;
 }
 
 .entry {
@@ -29,26 +29,31 @@
 }
 
 .entry-icon {
-  width: 72rpx;
-  height: 72rpx;
+  width: 64rpx;
+  height: 64rpx;
   margin: 0 auto 12rpx;
-  border-radius: 22rpx;
+  border-radius: 20rpx;
   color: #7c3cff;
-  font-size: 36rpx;
-  line-height: 72rpx;
+  font-size: 32rpx;
+  line-height: 64rpx;
   background: #f1ebff;
+}
+
+.entry-active .entry-icon {
+  color: #fff;
+  background: #7c3cff;
 }
 
 .entry-name {
   color: #202434;
-  font-size: 26rpx;
+  font-size: 24rpx;
   font-weight: 900;
 }
 
 .entry-count {
   margin-top: 6rpx;
   color: #8b8fa3;
-  font-size: 21rpx;
+  font-size: 20rpx;
 }
 
 .message-list {
