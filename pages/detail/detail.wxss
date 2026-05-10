@@ -119,8 +119,8 @@
 }
 
 .detail-card {
-  margin: -34rpx 0 24rpx;
-  padding: 30rpx 28rpx;
+  margin: 18rpx 0 24rpx;
+  padding: 34rpx 28rpx 30rpx;
   border-top-left-radius: 34rpx;
   border-top-right-radius: 34rpx;
 }
