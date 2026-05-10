@@ -1,7 +1,10 @@
 .message-hero {
+  position: relative;
   min-height: 230rpx;
+  padding-bottom: 46rpx;
   padding-left: 28rpx;
   padding-right: 28rpx;
+  z-index: 1;
 }
 
 .page-title {
@@ -12,10 +15,12 @@
 }
 
 .entry-card {
+  position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14rpx;
-  margin: -58rpx 28rpx 30rpx;
+  margin: -42rpx 28rpx 30rpx;
   padding: 24rpx;
 }
 

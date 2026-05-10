@@ -1,9 +1,12 @@
 .publish-page {
-  background: linear-gradient(180deg, #05070f 0, #05070f 240rpx, #f5f6fb 240rpx);
+  background: linear-gradient(180deg, #05070f 0, #05070f 280rpx, #f5f6fb 280rpx);
 }
 
 .publish-hero {
-  min-height: 220rpx;
+  position: relative;
+  z-index: 1;
+  min-height: 250rpx;
+  padding-bottom: 34rpx;
 }
 
 .topbar {
@@ -32,12 +35,14 @@
 }
 
 .form {
-  margin: -72rpx 28rpx 40rpx;
-  padding: 30rpx 26rpx 34rpx;
+  position: relative;
+  z-index: 2;
+  margin: -36rpx 28rpx 40rpx;
+  padding: 36rpx 26rpx 34rpx;
 }
 
 .field {
-  margin-bottom: 30rpx;
+  margin-bottom: 36rpx;
 }
 
 .label {
