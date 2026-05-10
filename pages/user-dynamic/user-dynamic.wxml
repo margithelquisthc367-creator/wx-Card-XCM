@@ -17,13 +17,23 @@
     </view>
   </view>
 
-  <view class="activity-card card">
-    <view class="activity-title">最近动态</view>
-    <view class="activity-item" wx:for="{{activity.recentActions}}" wx:key="*this">{{item}}</view>
+  <view class="creator-card card">
+    <view class="creator-stat">
+      <text>{{activity.stats.following}}</text>
+      <text>关注</text>
+    </view>
+    <view class="creator-stat">
+      <text>{{activity.stats.followers}}</text>
+      <text>粉丝</text>
+    </view>
+    <view class="creator-stat">
+      <text>{{activity.stats.works}}</text>
+      <text>作品</text>
+    </view>
   </view>
 
   <view class="section-head">
-    <text>TA 的帖子</text>
+    <text>TA 的作品</text>
     <text>{{activity.posts.length}} 条</text>
   </view>
   <post-card wx:for="{{activity.posts}}" wx:key="id" post="{{item}}" bind:tapcard="goDetail" />

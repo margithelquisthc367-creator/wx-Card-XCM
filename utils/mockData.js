@@ -157,14 +157,15 @@ const messageGroups = [
 const userActivities = users.map((user) => {
   const ownPosts = posts.filter((item) => item.author.id === user.id)
   const fallbackPosts = posts.filter((item) => item.author.id !== user.id).slice(0, 2)
+  const seed = user.id * 37
   return {
     user,
     posts: ownPosts.length ? ownPosts : fallbackPosts,
-    recentActions: [
-      `${user.nickname} 最近参与了花切动作讨论`,
-      `${user.nickname} 收藏了一个进阶练习帖`,
-      `${user.nickname} 给社区作品点了赞`
-    ]
+    stats: {
+      following: seed + 18,
+      followers: user.id === 1 ? '1.2k' : `${seed + 86}`,
+      works: ownPosts.length || fallbackPosts.length
+    }
   }
 })
 

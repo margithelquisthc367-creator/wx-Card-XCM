@@ -71,24 +71,37 @@
   line-height: 1.5;
 }
 
-.activity-card {
-  margin: -34rpx 20rpx 28rpx;
-  padding: 24rpx;
+.creator-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: -36rpx 20rpx 34rpx;
+  padding: 28rpx 0;
   border-radius: 18rpx;
   box-shadow: none;
 }
 
-.activity-title {
-  color: #1f2433;
-  font-size: 29rpx;
+.creator-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10rpx;
+  border-left: 2rpx solid #f1f2f6;
+}
+
+.creator-stat:first-child {
+  border-left: 0;
+}
+
+.creator-stat text:first-child {
+  color: #151923;
+  font-size: 36rpx;
   font-weight: 900;
 }
 
-.activity-item {
-  margin-top: 16rpx;
-  color: #5f6678;
-  font-size: 24rpx;
-  line-height: 1.5;
+.creator-stat text:last-child {
+  color: #7b8191;
+  font-size: 23rpx;
+  font-weight: 700;
 }
 
 .section-head {
