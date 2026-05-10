@@ -1,7 +1,7 @@
 .user-hero {
   position: relative;
   min-height: 330rpx;
-  padding: 0 28rpx 48rpx;
+  padding: 0 28rpx 58rpx;
 }
 
 .topbar {
@@ -75,9 +75,11 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14rpx;
-  margin: -28rpx 28rpx 42rpx;
+  margin: 26rpx 28rpx 48rpx;
   padding: 18rpx;
   border-radius: 24rpx;
+  overflow: hidden;
+  background: #fff;
   box-shadow: 0 16rpx 42rpx rgba(18, 24, 42, .08);
 }
 
