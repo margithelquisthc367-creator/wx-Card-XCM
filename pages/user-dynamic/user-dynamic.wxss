@@ -74,33 +74,34 @@
 .creator-card {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: -36rpx 20rpx 34rpx;
-  padding: 28rpx 0;
-  border-radius: 18rpx;
-  box-shadow: none;
+  gap: 14rpx;
+  margin: -28rpx 28rpx 42rpx;
+  padding: 18rpx;
+  border-radius: 24rpx;
+  box-shadow: 0 16rpx 42rpx rgba(18, 24, 42, .08);
 }
 
 .creator-stat {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 10rpx;
-  border-left: 2rpx solid #f1f2f6;
-}
-
-.creator-stat:first-child {
-  border-left: 0;
+  min-height: 118rpx;
+  border-radius: 18rpx;
+  background: #fafbff;
 }
 
 .creator-stat text:first-child {
-  color: #151923;
-  font-size: 36rpx;
+  color: #111827;
+  font-size: 40rpx;
   font-weight: 900;
+  line-height: 1;
 }
 
 .creator-stat text:last-child {
-  color: #7b8191;
-  font-size: 23rpx;
+  color: #8a91a3;
+  font-size: 22rpx;
   font-weight: 700;
 }
 
