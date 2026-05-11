@@ -38,10 +38,6 @@ Page({
       wx.navigateTo({ url: '/pages/intro/intro' })
       return
     }
-    if (value === '牌展') {
-      wx.navigateTo({ url: '/pages/card-show/card-show' })
-      return
-    }
     this.setData({ activeCategory: value }, () => this.refreshList())
   },
 

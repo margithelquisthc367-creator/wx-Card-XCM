@@ -1,4 +1,4 @@
-const categories = ['推荐', '原创', '大神复刻', '入门XCM', '牌展', '求指导']
+const categories = ['推荐', '原创', '大神复刻', '牌展', '求指导', '入门XCM']
 const introCategories = ['花切新手', '魔术流程']
 const publishCategories = ['原创', '大神复刻', '花切新手', '魔术流程', '牌展', '求指导']
 const difficulties = ['简单', '中等', '困难']
