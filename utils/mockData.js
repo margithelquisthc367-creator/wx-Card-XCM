@@ -1,6 +1,6 @@
 const categories = ['推荐', '原创', '大神复刻', '牌展', '求指导', '入门XCM']
-const introCategories = ['花切新手', '魔术流程']
-const publishCategories = ['原创', '大神复刻', '花切新手', '魔术流程', '牌展', '求指导']
+const introCategories = ['花切新手', '入门魔术流程']
+const publishCategories = ['原创', '大神复刻', '花切新手', '牌展', '求指导']
 const difficulties = ['简单', '中等', '困难']
 
 const currentUser = {
@@ -22,7 +22,7 @@ const users = [
   { id: 2, nickname: '魔术师阿凯', level: 'Lv.4', avatar: 'A', bio: '新手友好教程创作者。' },
   { id: 3, nickname: 'Kylin', level: 'Lv.6', avatar: 'K', bio: '原创花切动作研究中。' },
   { id: 4, nickname: 'NIKO', level: 'Lv.5', avatar: 'N', bio: '喜欢复刻经典大神动作。' },
-  { id: 5, nickname: 'AceLin', level: 'Lv.3', avatar: 'A', bio: '魔术流程和小舞台练习。' }
+  { id: 5, nickname: 'AceLin', level: 'Lv.3', avatar: 'A', bio: '入门魔术流程和小舞台练习。' }
 ]
 
 const posts = [
@@ -110,7 +110,7 @@ const posts = [
     id: 105,
     title: '三段式切牌组合',
     intro: '适合接在小流程里的三段组合，镜头前很干净，适合短视频展示。',
-    category: '魔术流程',
+    category: '入门魔术流程',
     difficulty: '中等',
     author: users[4],
     location: '北京',
