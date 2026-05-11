@@ -1,6 +1,6 @@
 const categories = ['推荐', '原创', '大神复刻', '牌展', '求指导', '入门XCM']
-const introCategories = ['花切新手', '入门魔术流程']
-const publishCategories = ['原创', '大神复刻', '花切新手', '牌展', '求指导']
+const introCategories = ['入门花切', '入门魔术流程']
+const publishCategories = ['原创', '大神复刻', '入门花切', '牌展', '求指导']
 const difficulties = ['简单', '中等', '困难']
 
 const currentUser = {
@@ -50,7 +50,7 @@ const posts = [
     id: 102,
     title: '单手开扇教学',
     intro: '适合刚开始练花切的朋友，重点是拇指发力、牌面压力和收尾角度。',
-    category: '花切新手',
+    category: '入门花切',
     difficulty: '简单',
     author: users[1],
     location: '深圳',
@@ -179,7 +179,7 @@ const messageGroups = [
 ]
 
 const introVideoGroups = {
-  花切新手: [
+  入门花切: [
     { id: 'beginner-1', title: '单手开扇基础练习', source: '免费教学精选', duration: '08:12', summary: '适合第一次练开扇的用户，先掌握拇指压力和牌面角度。', coverTone: 'blue' },
     { id: 'beginner-2', title: '基础切牌手位讲解', source: '公开教学整理', duration: '06:35', summary: '拆解切牌前的握牌、分牌和收牌动作。', coverTone: 'violet' },
     { id: 'beginner-3', title: '新手控牌稳定训练', source: '免费教学精选', duration: '09:20', summary: '用慢速练习建立手指稳定度，减少掉牌。', coverTone: 'silver' }
