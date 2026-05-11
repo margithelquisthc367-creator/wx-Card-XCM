@@ -12,16 +12,15 @@
     <view
       wx:for="{{tabs}}"
       wx:key="*this"
-      class="directory-item {{active === item ? 'directory-active' : ''}}"
+      class="directory-item"
       data-value="{{item}}"
-      bindtap="switchTab"
+      bindtap="openDirectory"
     >
       <text>{{item === '花切新手' ? '＋' : '♠'}}</text>
-      <view>{{item}}</view>
+      <view class="directory-main">
+        <view>{{item}}</view>
+        <view>免费教学视频目录</view>
+      </view>
     </view>
   </view>
-
-  <view class="feed-title">{{active}}帖子</view>
-  <post-card wx:for="{{visiblePosts}}" wx:key="id" post="{{item}}" bind:tapcard="goDetail" />
-  <empty-state wx:if="{{visiblePosts.length === 0}}" title="暂无帖子" desc="这个目录还没有新的内容" />
 </view>

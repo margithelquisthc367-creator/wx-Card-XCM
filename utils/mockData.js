@@ -178,6 +178,19 @@ const messageGroups = [
   { key: '私信', name: '私信', icon: '✉', count: 2 }
 ]
 
+const introVideoGroups = {
+  花切新手: [
+    { id: 'beginner-1', title: '单手开扇基础练习', source: '免费教学精选', duration: '08:12', summary: '适合第一次练开扇的用户，先掌握拇指压力和牌面角度。', coverTone: 'blue' },
+    { id: 'beginner-2', title: '基础切牌手位讲解', source: '公开教学整理', duration: '06:35', summary: '拆解切牌前的握牌、分牌和收牌动作。', coverTone: 'violet' },
+    { id: 'beginner-3', title: '新手控牌稳定训练', source: '免费教学精选', duration: '09:20', summary: '用慢速练习建立手指稳定度，减少掉牌。', coverTone: 'silver' }
+  ],
+  入门魔术流程: [
+    { id: 'magic-1', title: '三段式入门魔术流程', source: '公开教学整理', duration: '10:05', summary: '从展示、控牌到结尾效果，适合小流程入门。', coverTone: 'dark' },
+    { id: 'magic-2', title: '观众互动基础流程', source: '免费教学精选', duration: '07:48', summary: '学习如何把简单花切接入互动魔术表演。', coverTone: 'fan' },
+    { id: 'magic-3', title: '入门流程节奏安排', source: '公开教学整理', duration: '05:56', summary: '讲解开场、中段铺垫和结尾亮点的节奏。', coverTone: 'blue' }
+  ]
+}
+
 const userActivities = users.map((user) => {
   const ownPosts = posts.filter((item) => item.author.id === user.id)
   const fallbackPosts = posts.filter((item) => item.author.id !== user.id).slice(0, 2)
@@ -214,6 +227,7 @@ module.exports = {
   messages,
   profileFeeds,
   messageGroups,
+  introVideoGroups,
   userActivities,
   getUserById,
   getUserActivityById
