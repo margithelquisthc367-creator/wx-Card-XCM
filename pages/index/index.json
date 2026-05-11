@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "work-card": "/components/work-card/work-card",
+    "post-card": "/components/post-card/post-card",
     "category-tabs": "/components/category-tabs/category-tabs",
     "empty-state": "/components/empty-state/empty-state"
   },
