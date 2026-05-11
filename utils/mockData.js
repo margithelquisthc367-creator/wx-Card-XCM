@@ -178,16 +178,20 @@ const messageGroups = [
   { key: '私信', name: '私信', icon: '✉', count: 2 }
 ]
 
+const introVideoLevels = ['初级', '中级', '高级']
+
 const introVideoGroups = {
   入门花切: [
-    { id: 'beginner-1', title: '单手开扇基础练习', source: '免费教学精选', duration: '08:12', summary: '适合第一次练开扇的用户，先掌握拇指压力和牌面角度。', coverTone: 'blue' },
-    { id: 'beginner-2', title: '基础切牌手位讲解', source: '公开教学整理', duration: '06:35', summary: '拆解切牌前的握牌、分牌和收牌动作。', coverTone: 'violet' },
-    { id: 'beginner-3', title: '新手控牌稳定训练', source: '免费教学精选', duration: '09:20', summary: '用慢速练习建立手指稳定度，减少掉牌。', coverTone: 'silver' }
+    { id: 'beginner-1', level: '初级', title: '单手开扇基础练习', source: '免费教学精选', duration: '08:12', summary: '适合第一次练开扇的用户，先掌握拇指压力和牌面角度。', coverTone: 'blue' },
+    { id: 'beginner-2', level: '初级', title: '基础切牌手位讲解', source: '公开教学整理', duration: '06:35', summary: '拆解切牌前的握牌、分牌和收牌动作。', coverTone: 'violet' },
+    { id: 'beginner-3', level: '中级', title: '新手控牌稳定训练', source: '免费教学精选', duration: '09:20', summary: '用慢速练习建立手指稳定度，减少掉牌。', coverTone: 'silver' },
+    { id: 'beginner-4', level: '高级', title: '连续花切衔接示范', source: '公开教学整理', duration: '12:18', summary: '把基础开扇、切牌和翻转动作组合成连续展示。', coverTone: 'fan' }
   ],
   入门魔术流程: [
-    { id: 'magic-1', title: '三段式入门魔术流程', source: '公开教学整理', duration: '10:05', summary: '从展示、控牌到结尾效果，适合小流程入门。', coverTone: 'dark' },
-    { id: 'magic-2', title: '观众互动基础流程', source: '免费教学精选', duration: '07:48', summary: '学习如何把简单花切接入互动魔术表演。', coverTone: 'fan' },
-    { id: 'magic-3', title: '入门流程节奏安排', source: '公开教学整理', duration: '05:56', summary: '讲解开场、中段铺垫和结尾亮点的节奏。', coverTone: 'blue' }
+    { id: 'magic-1', level: '初级', title: '三段式入门魔术流程', source: '公开教学整理', duration: '10:05', summary: '从展示、控牌到结尾效果，适合小流程入门。', coverTone: 'dark' },
+    { id: 'magic-2', level: '中级', title: '观众互动基础流程', source: '免费教学精选', duration: '07:48', summary: '学习如何把简单花切接入互动魔术表演。', coverTone: 'fan' },
+    { id: 'magic-3', level: '高级', title: '入门流程节奏安排', source: '公开教学整理', duration: '05:56', summary: '讲解开场、中段铺垫和结尾亮点的节奏。', coverTone: 'blue' },
+    { id: 'magic-4', level: '高级', title: '流程结尾效果设计', source: '免费教学精选', duration: '11:22', summary: '学习如何安排最后的亮点动作，让流程更完整。', coverTone: 'silver' }
   ]
 }
 
@@ -227,6 +231,7 @@ module.exports = {
   messages,
   profileFeeds,
   messageGroups,
+  introVideoLevels,
   introVideoGroups,
   userActivities,
   getUserById,

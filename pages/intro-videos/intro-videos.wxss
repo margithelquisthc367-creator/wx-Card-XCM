@@ -29,8 +29,47 @@
   text-align: center;
 }
 
+.level-panel {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12rpx;
+  margin: 24rpx 20rpx 18rpx;
+  padding: 10rpx;
+  border-radius: 22rpx;
+  box-shadow: none;
+}
+
+.level-tab {
+  height: 64rpx;
+  border-radius: 16rpx;
+  color: #6b7280;
+  font-size: 25rpx;
+  font-weight: 900;
+  line-height: 64rpx;
+  text-align: center;
+  background: #f7f8fc;
+}
+
+.level-active {
+  color: #7c3cff;
+  background: #f1ebff;
+}
+
+.add-video {
+  margin: 0 20rpx 18rpx;
+  height: 72rpx;
+  border: 2rpx dashed rgba(124, 60, 255, .42);
+  border-radius: 20rpx;
+  color: #7c3cff;
+  font-size: 26rpx;
+  font-weight: 900;
+  line-height: 70rpx;
+  text-align: center;
+  background: #fbf9ff;
+}
+
 .video-list {
-  padding: 24rpx 20rpx 0;
+  padding: 0 20rpx;
 }
 
 .video-card {

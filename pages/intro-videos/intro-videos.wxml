@@ -8,6 +8,20 @@
     <view class="subtitle">免费教学视频目录</view>
   </view>
 
+  <view class="level-panel card">
+    <view
+      wx:for="{{levels}}"
+      wx:key="*this"
+      class="level-tab {{activeLevel === item ? 'level-active' : ''}}"
+      data-level="{{item}}"
+      bindtap="switchLevel"
+    >
+      {{item}}
+    </view>
+  </view>
+
+  <view class="add-video" bindtap="addVideo">＋ 添加{{activeLevel}}教学视频</view>
+
   <view class="video-list">
     <view class="video-card card" wx:for="{{videos}}" wx:key="id" bindtap="showPreview">
       <view class="video-cover cover-{{item.coverTone}}">
@@ -16,7 +30,7 @@
       </view>
       <view class="video-main">
         <view class="video-title">{{item.title}}</view>
-        <view class="video-source">{{item.source}}</view>
+        <view class="video-source">{{item.level}} · {{item.source}}</view>
         <view class="video-summary">{{item.summary}}</view>
       </view>
     </view>
