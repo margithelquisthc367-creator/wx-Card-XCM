@@ -40,28 +40,11 @@
     </view>
 
     <view class="field">
-      <view class="label">难度 <text>*</text></view>
-      <view class="option-grid difficulty-grid">
-        <view
-          wx:for="{{difficulties}}"
-          wx:key="*this"
-          class="option {{form.difficulty === item ? 'option-active' : ''}}"
-          data-value="{{item}}"
-          bindtap="chooseDifficulty"
-        >
-          {{ item }}
-        </view>
-      </view>
-    </view>
-
-    <view class="upload-row">
+      <view class="label">上传照片/视频</view>
       <view class="upload-box" bindtap="showUploadToast">
         <text class="plus">＋</text>
-        <text>上传封面</text>
-      </view>
-      <view class="upload-box" bindtap="showUploadToast">
-        <text class="plus">＋</text>
-        <text>上传视频</text>
+        <text>添加照片或视频</text>
+        <text class="upload-tip">第一阶段仅展示上传入口，不接真实上传</text>
       </view>
     </view>
 

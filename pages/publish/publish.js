@@ -1,14 +1,12 @@
-const { publishCategories, difficulties } = require('../../utils/mockData')
+const { publishCategories } = require('../../utils/mockData')
 
 Page({
   data: {
     publishCategories,
-    difficulties,
     form: {
       title: '',
       intro: '',
-      category: '',
-      difficulty: ''
+      category: ''
     }
   },
 
@@ -24,16 +22,12 @@ Page({
     this.setData({ 'form.category': event.currentTarget.dataset.value })
   },
 
-  chooseDifficulty(event) {
-    this.setData({ 'form.difficulty': event.currentTarget.dataset.value })
-  },
-
   showUploadToast() {
     wx.showToast({ title: '第一阶段暂不支持真实上传', icon: 'none' })
   },
 
   submit() {
-    const { title, intro, category, difficulty } = this.data.form
+    const { title, intro, category } = this.data.form
     if (!title.trim()) {
       wx.showToast({ title: '请填写标题', icon: 'none' })
       return
@@ -44,10 +38,6 @@ Page({
     }
     if (!category) {
       wx.showToast({ title: '请选择分类', icon: 'none' })
-      return
-    }
-    if (!difficulty) {
-      wx.showToast({ title: '请选择难度', icon: 'none' })
       return
     }
     wx.showToast({ title: '发布成功，这是前端模拟效果', icon: 'none' })

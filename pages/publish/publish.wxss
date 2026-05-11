@@ -106,21 +106,10 @@
   background: #fafbff;
 }
 
-.difficulty-grid .option {
-  min-width: 148rpx;
-}
-
 .option-active {
   border-color: #7c3cff;
   color: #7c3cff;
   background: #f1ebff;
-}
-
-.upload-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18rpx;
-  margin: 8rpx 0 34rpx;
 }
 
 .upload-box {
@@ -128,7 +117,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 176rpx;
+  height: 188rpx;
   border: 2rpx dashed #cfd4e4;
   border-radius: 24rpx;
   color: #6b7280;
@@ -141,6 +130,12 @@
   color: #7c3cff;
   font-size: 50rpx;
   font-weight: 700;
+}
+
+.upload-tip {
+  margin-top: 10rpx;
+  color: #9aa0af;
+  font-size: 22rpx;
 }
 
 .submit {
