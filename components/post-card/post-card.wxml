@@ -1,12 +1,46 @@
 <view class="post-card card" bindtap="handleTap">
-  <view class="post-body">
-    <view class="author-line">
-      <view class="avatar">{{ post.author.avatar }}</view>
-      <text class="author-name">{{ post.author.nickname }}</text>
-      <text class="time">{{ post.createdAt }}</text>
+  <view class="author-line">
+    <view class="avatar">{{ post.author.avatar }}</view>
+    <view class="author-main">
+      <view class="author-top">
+        <text class="author-name">{{ post.author.nickname }}</text>
+        <text class="level">{{ post.author.level }}</text>
+      </view>
+      <view class="author-meta">
+        <text>{{ post.category }}</text>
+        <text class="verified">已认证</text>
+      </view>
     </view>
+    <text class="online">{{ post.status || '在线' }}</text>
+  </view>
+
+  <view class="post-title-row">
     <view class="post-title">{{ post.title }}</view>
-    <view class="post-intro">{{ post.intro }}</view>
+    <view class="location">⌖ {{ post.location || '广州' }}</view>
+  </view>
+  <view class="post-intro">{{ post.intro }}</view>
+
+  <view class="media-grid">
+    <view class="media-item media-video cover-{{post.coverTone}}">
+      <view class="card-spark">✦</view>
+      <view class="card-fan">
+        <view class="mini-card mini-card-1">A</view>
+        <view class="mini-card mini-card-2">♠</view>
+        <view class="mini-card mini-card-3">K</view>
+      </view>
+      <view class="play">▶</view>
+      <view class="duration">{{ post.duration }}</view>
+    </view>
+    <view class="media-item media-photo photo-one">
+      <view class="photo-card">♣</view>
+    </view>
+    <view class="media-item media-photo photo-two">
+      <view class="photo-card">♦</view>
+      <view class="more-mask" wx:if="{{post.mediaExtra}}">{{post.mediaExtra}}</view>
+    </view>
+  </view>
+
+  <view class="post-footer">
     <view class="tag-row">
       <view class="tag">{{ post.category }}</view>
       <difficulty-tag level="{{post.difficulty}}" />
@@ -15,15 +49,5 @@
       <text>赞 {{ post.likes }}</text>
       <text>评论 {{ post.comments }}</text>
     </view>
-  </view>
-  <view class="cover cover-{{post.coverTone}}">
-    <view class="card-spark">✦</view>
-    <view class="card-fan">
-      <view class="mini-card mini-card-1">A</view>
-      <view class="mini-card mini-card-2">♠</view>
-      <view class="mini-card mini-card-3">K</view>
-    </view>
-    <view class="play">▶</view>
-    <view class="duration">{{ post.duration }}</view>
   </view>
 </view>
