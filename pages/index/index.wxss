@@ -1,39 +1,51 @@
-.index-hero {
-  padding-bottom: 8rpx;
-  border-bottom-left-radius: 34rpx;
-  border-bottom-right-radius: 34rpx;
+.index-page {
+  background: #f5f6fb;
 }
 
-.hero-title {
+.index-header {
+  padding-bottom: 0;
+  background: #fff;
+  border-bottom: 2rpx solid #eef0f6;
+}
+
+.index-header.safe-top {
+  padding-top: calc(76rpx + env(safe-area-inset-top));
+}
+
+.top-title {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 18rpx;
-  padding: 12rpx 28rpx 24rpx;
-}
-
-.brand {
-  color: #fff;
-  font-size: 38rpx;
+  min-height: 74rpx;
+  color: #111827;
+  font-size: 40rpx;
   font-weight: 900;
-  letter-spacing: 0;
-  text-transform: capitalize;
 }
 
-.spade {
-  color: #a883ff;
-  font-size: 36rpx;
+.mini-menu {
+  position: absolute;
+  right: 28rpx;
+  top: 8rpx;
+  height: 56rpx;
+  padding: 0 20rpx;
+  border: 2rpx solid #eef0f6;
+  border-radius: 999rpx;
+  color: #111827;
+  font-size: 24rpx;
+  line-height: 54rpx;
+  background: #fff;
 }
 
 .search-box {
   display: flex;
   align-items: center;
-  height: 74rpx;
-  margin: 0 28rpx 12rpx;
+  height: 72rpx;
+  margin: 18rpx 20rpx;
   padding: 0 24rpx;
   border-radius: 20rpx;
-  color: rgba(255, 255, 255, .56);
-  background: rgba(255, 255, 255, .1);
+  color: #8b8fa3;
+  background: #fff;
 }
 
 .search-icon {
@@ -46,5 +58,8 @@
 }
 
 .feed {
-  padding-top: 26rpx;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14rpx;
+  padding: 0 10rpx 24rpx;
 }
