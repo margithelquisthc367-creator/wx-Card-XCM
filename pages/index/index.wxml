@@ -1,18 +1,19 @@
 <view class="page index-page">
-  <view class="index-hero dark-hero safe-top">
-    <view class="hero-title">
-      <text class="brand">XCM Community</text>
-      <text class="spade">♠</text>
-    </view>
-    <view class="search-box" bindtap="goSearch">
-      <text class="search-icon">⌕</text>
-      <text class="search-placeholder">搜索动作、教程、用户</text>
+  <view class="index-header safe-top">
+    <view class="top-title">
+      <text>作品</text>
+      <view class="mini-menu">••• ◎</view>
     </view>
     <category-tabs categories="{{categories}}" active="{{activeCategory}}" bind:change="handleCategoryChange" />
   </view>
 
+  <view class="search-box" bindtap="goSearch">
+    <text class="search-icon">⌕</text>
+    <text class="search-placeholder">搜索动作、教程、用户</text>
+  </view>
+
   <view class="feed">
-    <post-card
+    <work-card
       wx:for="{{visiblePosts}}"
       wx:key="id"
       post="{{item}}"

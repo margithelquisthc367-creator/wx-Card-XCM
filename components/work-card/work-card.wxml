@@ -1,0 +1,22 @@
+<view class="work-card" bindtap="handleTap">
+  <view class="cover cover-{{post.coverTone}}">
+    <view class="card-fan">
+      <view>A</view>
+      <view>♠</view>
+      <view>K</view>
+    </view>
+    <view class="play">▶</view>
+    <view class="duration">{{post.duration}}</view>
+  </view>
+  <view class="work-body">
+    <view class="work-title">{{post.title}}</view>
+    <view class="author-row">
+      <view class="avatar">{{post.author.avatar}}</view>
+      <view class="author-main">
+        <view class="name">{{post.author.nickname}}</view>
+        <view class="meta">{{post.category}}｜{{post.location || '广州'}}</view>
+      </view>
+      <view class="time">{{post.createdAt}}</view>
+    </view>
+  </view>
+</view>
