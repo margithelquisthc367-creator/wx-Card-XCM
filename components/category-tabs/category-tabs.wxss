@@ -29,6 +29,6 @@
   bottom: 8rpx;
   height: 7rpx;
   border-radius: 999rpx;
-  background: #ff4d68;
+  background: #7c3cff;
   content: "";
 }

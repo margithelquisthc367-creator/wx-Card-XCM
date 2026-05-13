@@ -22,6 +22,7 @@
 
   <view class="media-grid">
     <view class="media-item media-video cover-{{post.coverTone}}">
+      <image wx:if="{{post.coverFileID}}" class="cover-image" src="{{post.coverFileID}}" mode="aspectFill" />
       <view class="card-spark">✦</view>
       <view class="card-fan">
         <view class="mini-card mini-card-1">A</view>

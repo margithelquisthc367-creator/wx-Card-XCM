@@ -13,7 +13,7 @@
   </view>
 
   <view class="feed">
-    <work-card
+    <post-card
       wx:for="{{visiblePosts}}"
       wx:key="id"
       post="{{item}}"

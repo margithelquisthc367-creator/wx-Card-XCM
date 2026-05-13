@@ -37,7 +37,7 @@
 }
 
 .active {
-  color: #ff4d68;
+  color: #7c3cff;
 }
 
 .active .tab-icon {
@@ -49,6 +49,6 @@
   font-size: 34rpx;
   font-weight: 900;
   line-height: 54rpx;
-  background: #ff4d68;
-  box-shadow: 0 10rpx 22rpx rgba(255, 77, 104, .24);
+  background: #7c3cff;
+  box-shadow: 0 10rpx 22rpx rgba(124, 60, 255, .24);
 }

@@ -1,7 +1,7 @@
 .post-card {
   padding: 28rpx;
   margin: 0 20rpx 18rpx;
-  border-radius: 20rpx;
+  border-radius: 24rpx;
   box-shadow: none;
 }
 
@@ -117,8 +117,21 @@
   position: relative;
   overflow: hidden;
   height: 188rpx;
-  border-radius: 14rpx;
+  border-radius: 18rpx;
   background: #080b14;
+}
+
+.cover-image {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.cover-image ~ .card-spark,
+.cover-image ~ .card-fan {
+  display: none;
 }
 
 .media-video::before,
@@ -222,6 +235,7 @@
   position: absolute;
   left: 50%;
   top: 50%;
+  z-index: 2;
   width: 54rpx;
   height: 54rpx;
   border-radius: 50%;
@@ -237,6 +251,7 @@
   position: absolute;
   right: 10rpx;
   bottom: 10rpx;
+  z-index: 2;
   padding: 2rpx 8rpx;
   border-radius: 8rpx;
   color: #fff;
@@ -265,6 +280,7 @@
   position: absolute;
   right: 0;
   bottom: 0;
+  z-index: 2;
   min-width: 72rpx;
   height: 54rpx;
   border-top-left-radius: 14rpx;

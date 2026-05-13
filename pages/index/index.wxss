@@ -58,8 +58,5 @@
 }
 
 .feed {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14rpx;
-  padding: 0 10rpx 24rpx;
+  padding: 0 0 24rpx;
 }
