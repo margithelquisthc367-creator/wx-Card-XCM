@@ -1,1 +1,8 @@
 project.private.config.json
+
+# Local cloud-development experiments are not part of the current mock-UI phase.
+cloudfunctions/
+components/cloud-status-card/
+pages/cloud-test/
+utils/cloud.js
+utils/postAdapter.js
