@@ -11,6 +11,6 @@
   </view>
 
   <view class="result-info">找到 {{results.length}} 个相关作品</view>
-  <post-card wx:for="{{results}}" wx:key="id" post="{{item}}" bind:tapcard="goDetail" />
+  <post-card wx:for="{{results}}" wx:key="id" post="{{item}}" bind:tapcard="goDetail" bind:tapauthor="goAuthor" />
   <empty-state wx:if="{{results.length === 0}}" title="没有搜索结果" desc="试试搜索动作、教程或作者昵称" />
 </view>

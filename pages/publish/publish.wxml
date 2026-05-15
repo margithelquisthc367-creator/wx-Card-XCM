@@ -2,7 +2,7 @@
   <view class="publish-hero dark-hero safe-top">
     <view class="topbar">
       <text class="back">‹</text>
-      <text class="title">发布作品</text>
+      <text class="title">创作</text>
       <text class="more">•••</text>
     </view>
   </view>
@@ -40,14 +40,42 @@
     </view>
 
     <view class="field">
-      <view class="label">上传照片/视频</view>
-      <view class="upload-box" bindtap="showUploadToast">
-        <text class="plus">＋</text>
-        <text>添加照片或视频</text>
-        <text class="upload-tip">第一阶段仅展示上传入口，不接真实上传</text>
+      <view class="label">上传 <text>*</text></view>
+      <view class="upload-box {{mediaFiles.length ? 'upload-box-filled' : ''}}" bindtap="chooseMedia">
+        <block wx:if="{{mediaFiles.length}}">
+          <view class="media-preview-grid">
+            <view wx:for="{{mediaFiles}}" wx:key="path" class="media-preview">
+              <video
+                wx:if="{{item.type === 'video'}}"
+                class="upload-preview"
+                src="{{item.path}}"
+                controls="{{false}}"
+                show-center-play-btn="{{true}}"
+                object-fit="cover"
+              />
+              <image wx:else class="upload-preview" src="{{item.path}}" mode="aspectFill" />
+              <view class="video-badge" wx:if="{{item.type === 'video'}}">
+                <text>▶</text>
+                <text>{{item.duration}}</text>
+              </view>
+              <view class="first-badge" wx:if="{{index === 0}}">
+                {{item.type === 'video' ? '帖子第1张' : '首图'}}
+              </view>
+              <view class="remove-media" data-index="{{index}}" catchtap="removeMedia">×</view>
+            </view>
+          </view>
+          <view class="upload-tip">点击可重新选择，视频会显示在帖子第一张</view>
+        </block>
+        <block wx:else>
+          <text class="plus">+</text>
+          <text class="upload-title">上传照片/视频</text>
+          <text class="upload-desc">可只发图片，也可选择视频；有视频时自动放在帖子第一张</text>
+        </block>
       </view>
     </view>
 
-    <button class="submit primary-gradient" bindtap="submit">发布我的创作</button>
+    <view class="publish-error" wx:if="{{errorText}}">{{errorText}}</view>
+
+    <button class="submit primary-gradient" loading="{{submitting}}" bindtap="submit">发布我的创作</button>
   </view>
 </view>

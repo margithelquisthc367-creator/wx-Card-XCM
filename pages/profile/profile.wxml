@@ -45,6 +45,6 @@
         {{item.name}}
       </view>
     </view>
-    <post-card wx:for="{{visiblePosts}}" wx:key="id" post="{{item}}" bind:tapcard="goDetail" />
+    <post-card wx:for="{{visiblePosts}}" wx:key="id" post="{{item}}" bind:tapcard="goDetail" bind:tapauthor="goAuthor" />
   </view>
 </view>

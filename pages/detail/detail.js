@@ -20,7 +20,7 @@ Page({
     wx.navigateBack()
   },
 
-  goUser(event) {
+  goAuthor(event) {
     wx.navigateTo({ url: `/pages/user-dynamic/user-dynamic?id=${event.currentTarget.dataset.id}` })
   },
 

@@ -1,34 +1,55 @@
-<view class="page user-dynamic-page" wx:if="{{activity}}">
-  <view class="user-hero dark-hero safe-top">
-    <view class="topbar">
+<view class="page creator-page" wx:if="{{activity}}">
+  <view class="creator-cover">
+    <view class="cover-glow"></view>
+    <view class="topbar safe-top">
       <text class="back" bindtap="goBack">‹</text>
-      <text class="title">用户动态</text>
-      <text></text>
+      <text class="title">创作者主页</text>
+      <text class="more">•••</text>
     </view>
-    <view class="user-row">
+  </view>
+
+  <view class="creator-profile card">
+    <view class="profile-main">
       <view class="big-avatar">{{activity.user.avatar}}</view>
-      <view class="user-main">
-        <view>
+      <view class="identity">
+        <view class="name-row">
           <text class="nickname">{{activity.user.nickname}}</text>
           <text class="level">{{activity.user.level}}</text>
         </view>
         <view class="bio">{{activity.user.bio}}</view>
       </view>
+      <button class="follow-btn">关注</button>
+    </view>
+
+    <view class="stats-row">
+      <view class="stat-item">
+        <text>{{activity.stats.following}}</text>
+        <text>关注</text>
+      </view>
+      <view class="stat-item">
+        <text>{{activity.stats.followers}}</text>
+        <text>粉丝</text>
+      </view>
+      <view class="stat-item">
+        <text>{{activity.stats.works}}</text>
+        <text>作品</text>
+      </view>
     </view>
   </view>
 
-  <view class="creator-card card">
-    <view class="creator-stat">
-      <text>{{activity.stats.following}}</text>
-      <text>关注</text>
-    </view>
-    <view class="creator-stat">
-      <text>{{activity.stats.followers}}</text>
-      <text>粉丝</text>
-    </view>
-    <view class="creator-stat">
-      <text>{{activity.stats.works}}</text>
-      <text>作品</text>
+  <view class="creator-tabs card">
+    <view class="creator-tab active">主页</view>
+    <view class="creator-tab">投稿</view>
+    <view class="creator-tab">收藏</view>
+  </view>
+
+  <view class="creator-intro card">
+    <view class="intro-title">个人简介</view>
+    <view class="intro-text">{{activity.user.bio}}</view>
+    <view class="intro-tags">
+      <text>魔术花切</text>
+      <text>教学分享</text>
+      <text>视频创作</text>
     </view>
   </view>
 
@@ -36,6 +57,6 @@
     <text>TA 的作品</text>
     <text>{{activity.posts.length}} 条</text>
   </view>
-  <post-card wx:for="{{activity.posts}}" wx:key="id" post="{{item}}" bind:tapcard="goDetail" />
-  <empty-state wx:if="{{activity.posts.length === 0}}" title="暂无动态" desc="这个用户还没有发布内容" />
+  <post-card wx:for="{{activity.posts}}" wx:key="id" post="{{item}}" bind:tapcard="goDetail" bind:tapauthor="goAuthor" />
+  <empty-state wx:if="{{activity.posts.length === 0}}" title="暂无作品" desc="这个用户还没有发布内容" />
 </view>

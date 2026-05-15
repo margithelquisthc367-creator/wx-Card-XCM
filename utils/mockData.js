@@ -1,6 +1,6 @@
 const categories = ['推荐', '原创', '大神复刻', '牌展', '求指导', '入门XCM']
 const introCategories = ['入门花切', '入门魔术流程']
-const publishCategories = ['原创', '大神复刻', '入门花切', '牌展', '求指导']
+const publishCategories = ['原创', '大神复刻', '牌展', '求指导']
 const difficulties = ['简单', '中等', '困难']
 
 const currentUser = {

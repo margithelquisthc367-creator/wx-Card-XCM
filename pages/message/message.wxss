@@ -1,17 +1,19 @@
 .message-hero {
   position: relative;
-  min-height: 230rpx;
-  padding-bottom: 46rpx;
+  min-height: 270rpx;
+  padding-top: calc(92rpx + env(safe-area-inset-top));
+  padding-bottom: 40rpx;
   padding-left: 28rpx;
   padding-right: 28rpx;
   z-index: 1;
 }
 
 .page-title {
-  padding-top: 44rpx;
   color: #fff;
   font-size: 42rpx;
   font-weight: 900;
+  line-height: 72rpx;
+  text-align: center;
 }
 
 .entry-card {
@@ -20,7 +22,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10rpx;
-  margin: -42rpx 28rpx 30rpx;
+  margin: -34rpx 28rpx 30rpx;
   padding: 18rpx;
 }
 

@@ -24,7 +24,7 @@
       <difficulty-tag level="{{post.difficulty}}" />
     </view>
 
-    <view class="author-row" data-id="{{post.author.id}}" bindtap="goUser">
+    <view class="author-row" data-id="{{post.author.id}}" bindtap="goAuthor">
       <view class="avatar">{{post.author.avatar}}</view>
       <view class="author-main">
         <view>
@@ -61,9 +61,9 @@
   <view class="comments card">
     <view class="section-title">评论（{{post.comments}}）</view>
     <view class="comment" wx:for="{{comments}}" wx:key="id">
-      <view class="comment-avatar" data-id="{{item.author.id}}" bindtap="goUser">{{item.author.avatar}}</view>
+      <view class="comment-avatar" data-id="{{item.author.id}}" bindtap="goAuthor">{{item.author.avatar}}</view>
       <view class="comment-main">
-        <view class="comment-name" data-id="{{item.author.id}}" bindtap="goUser">
+        <view class="comment-name" data-id="{{item.author.id}}" bindtap="goAuthor">
           <text>{{item.author.nickname}}</text>
           <text class="level">{{item.author.level}}</text>
         </view>
